@@ -2,11 +2,9 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-
-var config = require('./config');
 var path = require('path');
 
-
+app.set('port', (process.env.PORT || 5000));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
@@ -22,4 +20,4 @@ app.get('*', function(req, res){
 });
 
 app.listen(config.port);
-console.log('App running on port' + config.port);
+console.log('App running on port ', app.get('port'));
