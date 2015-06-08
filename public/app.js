@@ -9,6 +9,30 @@ angular.module('aligApp',[ 'ngRoute'])
       controller  : 'mainController'
 
 
+		})
+		.when('/about', {
+			templateUrl : 'views/about.html',
+      controller  : 'mainController'
+
+
+		})
+		.when('/faq', {
+			templateUrl : 'views/faq.html',
+      controller  : 'mainController'
+
+
+		})
+		.when('/contact', {
+			templateUrl : 'views/contact.html',
+      controller  : 'mainController'
+
+
+		})
+		.when('/downloads', {
+			templateUrl : 'views/downloads.html',
+      controller  : 'mainController'
+
+
 		});
 
 
